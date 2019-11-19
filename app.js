@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    let numDots = 36;
+    let numDots = 256;
     for (let i = 0; i < numDots; i++) {
         $(".content").append("<div class='circ off'></div>");
     }
