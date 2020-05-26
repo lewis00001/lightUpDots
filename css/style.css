@@ -88,6 +88,10 @@ footer {
     grid-area: dot-output;
 }
 
+.dot:hover {
+    background-color: #111;
+}
+
 .content {
     display: grid;
     max-width: 975px;
@@ -162,6 +166,31 @@ footer {
     box-shadow: none;
     background-color: #222;
     border: 1px solid white;
+}
+
+.grid-toggle {
+    width: 100%;
+    border: 1px solid var(--gen-text-color);
+    margin: 10px auto 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.toggle {
+    display: flex;
+    padding: 8px;
+    width: 50%;
+    justify-content: center;
+    color: var(--gen-text-color);
+    cursor: pointer;
+}
+
+.toggle:hover {
+    background-color: #111;
+}
+
+.toggle-active {
+    background-color: #111;
 }
 
 #active-color {

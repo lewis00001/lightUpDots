@@ -14,7 +14,6 @@ $(document).ready(function () {
     // records color selection
     $('.color-options').on('click', function () {
         activeColor = $(this).attr('value');
-        console.log(activeColor);
         console.log(activeColorSelected);
         activeColorSelected = activeColor.replace("set-","");
         $('#active-color').removeClass();
@@ -26,6 +25,24 @@ $(document).ready(function () {
     // adds currently selected color to circ
     $('.dot').on('click', function (e) {
         $(this).removeClass();
-        $(this).addClass(dotShape).addClass(activeColor);
+        $(this).addClass('dot').addClass(dotShape).addClass(activeColor);
+    });
+
+    // sets shape of dot in the grid
+    $(".toggle").on('click', function (e) {
+        let clicked = $(this).hasClass('t-circle');
+        // change from square to circle
+        if(clicked) {
+            $('.t-circle').addClass('toggle-active');
+            $('.t-square').removeClass('toggle-active');
+            $('.dot').removeClass('sqr').addClass('circ');
+            dotShape = "circ";
+        // change from circle to square 
+        } else {
+            $('.t-circle').removeClass('toggle-active');
+            $('.t-square').addClass('toggle-active');
+            $('.dot').removeClass('circ').addClass('sqr');
+            dotShape = "sqr";
+        }
     });
 });
