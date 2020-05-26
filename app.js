@@ -6,11 +6,11 @@ $(document).ready(function () {
     // generates all the dots on the screen
     let numDots = 208;
     for (let i = 0; i < numDots; i++) {
-        $(".dot-output").append("<div class='circ set-off'></div>");
+        $(".dot-output").append("<div class='dot circ set-off'></div>");
     }
     // active color selection
-    let activeColor = "set-off";
-    let activeColorSelected = "off";
+    let activeColor = "set-pink";
+    let activeColorSelected = "pink";
     // records color selection
     $('.color-options').on('click', function () {
         activeColor = $(this).attr('value');
@@ -21,9 +21,11 @@ $(document).ready(function () {
         $('#active-color').addClass(activeColorSelected);
     });
 
+    let dotShape = "circ";
+
     // adds currently selected color to circ
-    $('.circ').on('click', function (e) {
+    $('.dot').on('click', function (e) {
         $(this).removeClass();
-        $(this).addClass("circ").addClass(activeColor);
+        $(this).addClass(dotShape).addClass(activeColor);
     });
 });
