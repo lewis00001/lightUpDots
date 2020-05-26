@@ -6,24 +6,24 @@ $(document).ready(function () {
     // generates all the dots on the screen
     let numDots = 208;
     for (let i = 0; i < numDots; i++) {
-        $(".dot-output").append("<div class='circ off'></div>");
+        $(".dot-output").append("<div class='circ set-off'></div>");
     }
     // active color selection
-    let activeColor = "off";
+    let activeColor = "set-off";
+    let activeColorSelected = "off";
     // records color selection
+    $('.color-options').on('click', function () {
+        activeColor = $(this).attr('value');
+        console.log(activeColor);
+        console.log(activeColorSelected);
+        activeColorSelected = activeColor.replace("set-","");
+        $('#active-color').removeClass();
+        $('#active-color').addClass(activeColorSelected);
+    });
 
-
-    // cycles though colors based on currently displayed color
+    // adds currently selected color to circ
     $('.circ').on('click', function (e) {
-
-        if ($(this).hasClass("b")) {
-            $(this).toggleClass("b g");
-        } else if ($(this).hasClass("g")) {
-            $(this).toggleClass("g r");
-        } else if ($(this).hasClass("r")) {
-            $(this).toggleClass("r off");
-        } else if ($(this).hasClass("off")) {
-            $(this).toggleClass("off b");
-        }
+        $(this).removeClass();
+        $(this).addClass("circ").addClass(activeColor);
     });
 });

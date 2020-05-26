@@ -1,5 +1,9 @@
 :root {
-    --gen-text-color: #999; 
+    --gen-text-color: #999;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -63,6 +67,7 @@ footer {
     color: var(--gen-text-color);
     font-size: 20px;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .dot-output {
@@ -90,37 +95,65 @@ footer {
 }
 
 .set-pink {
-    background-color: hotpink;
-}
-.set-green {
-    background-color: lightgreen;
-}
-.set-blue {
-    background-color: #88aaff;
-}
-.set-orange {
-    background-color: lightcoral
-}
-
-.r {
     box-shadow: 0 0 8px #fff, 0 0 30px hotpink,
         0 0 40px hotpink, 0 0 50px hotpink, 0 0 60px hotpink;
     background-color: rgb(255, 240, 240);
 }
 
-.b {
+.set-green {
+    box-shadow: 0 0 8px #fff, 0 0 30px lightgreen,
+        0 0 40px lightgreen, 0 0 50px lightgreen, 0 0 60px lightgreen;
+    background-color: #fff;
+    background-color: rgb(240, 240, 255)
+}
+
+.set-blue {
     box-shadow: 0 0 8px #fff, 0 0 30px #99ccff,
         0 0 40px #99ccff, 0 0 50px #99ccff, 0 0 60px #88aaff;
     background-color: rgb(240, 240, 255);
 }
 
-.g {
-    box-shadow: 0 0 8px #fff, 0 0 30px lightgreen,
-        0 0 40px lightgreen, 0 0 50px lightgreen, 0 0 60px lightgreen;
-    background-color: #fff;
+.set-orange {
+    box-shadow: 0 0 8px #fff, 0 0 30px lightcoral,
+        0 0 40px lightcoral, 0 0 50px lightcoral, 0 0 60px lightcoral;
+    background-color: rgb(240, 240, 255);
+}
+
+.set-off {
+    box-shadow: none;
+    background-color: #222;
+}
+
+.pink {
+    cursor: pointer;
+    background-color: hotpink;
+}
+
+.green {
+    cursor: pointer;
+    background-color: lightgreen;
+}
+
+.blue {
+    cursor: pointer;
+    background-color: #99ccff;
+}
+
+.orange {
+    cursor: pointer;
+    background-color: lightcoral;
 }
 
 .off {
+    cursor: pointer;
     box-shadow: none;
     background-color: #222;
+    border: 1px solid white;
+}
+
+#active-color {
+    display: flex;
+    width: 35px;
+    height: 35px;
+    margin: 10px auto 10px auto;
 }
