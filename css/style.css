@@ -1,9 +1,13 @@
-:root {
-    --gen-text-color: #999;
-}
-
 * {
     box-sizing: border-box;
+}
+
+:root {
+    --gen-text-color: #999;
+    --pink: hotpink;
+    --green: lightgreen;
+    --blue: #99ccff;
+    --orange: lightcoral;
 }
 
 body {
@@ -95,27 +99,26 @@ footer {
 }
 
 .set-pink {
-    box-shadow: 0 0 8px #fff, 0 0 30px hotpink,
-        0 0 40px hotpink, 0 0 50px hotpink, 0 0 60px hotpink;
+    box-shadow: 0 0 8px #fff, 0 0 30px var(--pink),
+        0 0 40px var(--pink), 0 0 50px var(--pink), 0 0 60px var(--pink);
     background-color: rgb(255, 240, 240);
 }
 
 .set-green {
-    box-shadow: 0 0 8px #fff, 0 0 30px lightgreen,
-        0 0 40px lightgreen, 0 0 50px lightgreen, 0 0 60px lightgreen;
-    background-color: #fff;
+    box-shadow: 0 0 8px #fff, 0 0 30px var(--green),
+        0 0 40px var(--green), 0 0 50px var(--green), 0 0 60px var(--green);
     background-color: rgb(240, 240, 255)
 }
 
 .set-blue {
-    box-shadow: 0 0 8px #fff, 0 0 30px #99ccff,
-        0 0 40px #99ccff, 0 0 50px #99ccff, 0 0 60px #88aaff;
+    box-shadow: 0 0 8px #fff, 0 0 30px var(--blue),
+        0 0 40px var(--blue), 0 0 50px var(--blue), 0 0 60px var(--blue);
     background-color: rgb(240, 240, 255);
 }
 
 .set-orange {
-    box-shadow: 0 0 8px #fff, 0 0 30px lightcoral,
-        0 0 40px lightcoral, 0 0 50px lightcoral, 0 0 60px lightcoral;
+    box-shadow: 0 0 8px #fff, 0 0 30px var(--orange),
+        0 0 40px var(--orange), 0 0 50px var(--orange), 0 0 60px var(--orange);
     background-color: rgb(240, 240, 255);
 }
 
