@@ -1,0 +1,126 @@
+:root {
+    --gen-text-color: #999; 
+}
+
+body {
+    background-color: #333;
+}
+
+hr {
+    margin-bottom: 15px;
+    border-top: 1px solid var(--gen-text-color);
+    border-bottom: 1px solid #333;
+}
+
+h1 {
+    color: var(--gen-text-color);
+    font-size: 30px;
+    float: left;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+span {
+    font-size: 15px;
+    text-shadow: none;
+    color: var(--gen-text-color);
+    float: right;
+    margin-top: 15px;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+header {
+    grid-area: header;
+}
+
+footer {
+    grid-area: footer;
+    color: var(--gen-text-color);
+    margin-bottom: 15px;
+}
+
+.circ {
+    margin: 10px;
+    float: left;
+    cursor: pointer;
+    opacity: 100%;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.options {
+    grid-area: options;
+    display: flex;
+    flex-direction: column;
+    background-color: #222;
+    padding: 10px;
+}
+
+.options-h {
+    color: var(--gen-text-color);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.dot-output {
+    grid-area: dot-output;
+}
+
+.content {
+    display: grid;
+    max-width: 975px;
+    margin: auto;
+    grid-template-columns: 175px 200px 200px 200px 200px;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header header header header"
+        "options dot-output dot-output dot-output dot-output"
+        "options dot-output dot-output dot-output dot-output"
+        "footer footer footer footer footer";
+}
+
+.color-options {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+}
+
+.set-pink {
+    background-color: hotpink;
+}
+.set-green {
+    background-color: lightgreen;
+}
+.set-blue {
+    background-color: #88aaff;
+}
+.set-orange {
+    background-color: lightcoral
+}
+
+.r {
+    box-shadow: 0 0 8px #fff, 0 0 30px hotpink,
+        0 0 40px hotpink, 0 0 50px hotpink, 0 0 60px hotpink;
+    background-color: rgb(255, 240, 240);
+}
+
+.b {
+    box-shadow: 0 0 8px #fff, 0 0 30px #99ccff,
+        0 0 40px #99ccff, 0 0 50px #99ccff, 0 0 60px #88aaff;
+    background-color: rgb(240, 240, 255);
+}
+
+.g {
+    box-shadow: 0 0 8px #fff, 0 0 30px lightgreen,
+        0 0 40px lightgreen, 0 0 50px lightgreen, 0 0 60px lightgreen;
+    background-color: #fff;
+}
+
+.off {
+    box-shadow: none;
+    background-color: #222;
+}

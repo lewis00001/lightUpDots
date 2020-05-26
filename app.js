@@ -1,13 +1,18 @@
 $(document).ready(function () {
-    // reloads the html page when the span is clicked
-    $('span').on('click', function () {
+    // reloads the html page
+    $('#clear').on('click', function () {
         location.reload();
     });
     // generates all the dots on the screen
-    let numDots = 256;
+    let numDots = 208;
     for (let i = 0; i < numDots; i++) {
-        $(".content").append("<div class='circ off'></div>");
+        $(".dot-output").append("<div class='circ off'></div>");
     }
+    // active color selection
+    let activeColor = "off";
+    // records color selection
+
+
     // cycles though colors based on currently displayed color
     $('.circ').on('click', function (e) {
 
