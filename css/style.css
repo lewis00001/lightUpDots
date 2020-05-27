@@ -79,7 +79,7 @@ footer {
 .options-h {
     color: var(--gen-text-color);
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     margin-top: 10px;
     text-align: center;
 }
@@ -89,7 +89,7 @@ footer {
 }
 
 .dot:hover {
-    background-color: #111;
+    border: 1px solid var(--gen-text-color);
 }
 
 .content {
@@ -112,31 +112,31 @@ footer {
     margin: 5px;
 }
 
-.set-pink {
+.glow-pink {
     box-shadow: 0 0 8px #fff, 0 0 30px var(--pink),
         0 0 40px var(--pink), 0 0 50px var(--pink), 0 0 60px var(--pink);
     background-color: rgb(255, 240, 240);
 }
 
-.set-green {
+.glow-green {
     box-shadow: 0 0 8px #fff, 0 0 30px var(--green),
         0 0 40px var(--green), 0 0 50px var(--green), 0 0 60px var(--green);
     background-color: rgb(240, 240, 255)
 }
 
-.set-blue {
+.glow-blue {
     box-shadow: 0 0 8px #fff, 0 0 30px var(--blue),
         0 0 40px var(--blue), 0 0 50px var(--blue), 0 0 60px var(--blue);
     background-color: rgb(240, 240, 255);
 }
 
-.set-orange {
+.glow-orange {
     box-shadow: 0 0 8px #fff, 0 0 30px var(--orange),
         0 0 40px var(--orange), 0 0 50px var(--orange), 0 0 60px var(--orange);
     background-color: rgb(240, 240, 255);
 }
 
-.set-off {
+.glow-off {
     box-shadow: none;
     background-color: #222;
 }
@@ -176,7 +176,7 @@ footer {
     justify-content: space-around;
 }
 
-.toggle {
+.toggle-shape, .toggle-glow {
     display: flex;
     padding: 8px;
     width: 50%;
@@ -194,8 +194,29 @@ footer {
 }
 
 #active-color {
+    position:relative;
     display: flex;
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
     margin: 10px auto 10px auto;
+}
+
+#active-color::after {
+    content:"";
+    border-style: solid;
+    border-width: 10px 15px 10px 0;
+    border-color: transparent #444 transparent transparent;
+    position: absolute;
+    left: 55px;
+    top: 2px;
+}
+
+#active-color::before {
+    content:"";
+    border-style: solid;
+    border-width: 10px 0 10px 15px;
+    border-color: transparent  transparent transparent #444;
+    position: absolute;
+    left: -45px;
+    top: 2px;
 }
