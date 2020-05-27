@@ -12,7 +12,7 @@ $(document).ready(function () {
     });
     // generates all the dots on the screen
     for (let i = 0; i < numDots; i++) {
-        $(".dot-output").append("<div class='dot circ glow-off'></div>");
+        $(".dot-output").append("<div class='dot circ glow-off' id='" + i + "'></div>");
     }
 
     // records color selection - checks for glow

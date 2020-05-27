@@ -196,6 +196,13 @@ footer {
     background-color: #111;
 }
 
+.start-img {
+    padding: 4px;
+    color: var(--gen-text-color);
+    cursor: pointer;
+    background-color: #111;
+}
+
 #active-color {
     position:relative;
     display: flex;
