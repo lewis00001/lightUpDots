@@ -12,7 +12,7 @@ $(document).ready(function () {
     });
     // generates all the dots on the screen
     for (let i = 0; i < numDots; i++) {
-        $(".dot-output").append("<div class='dot circ glow-off' id='" + i + "'></div>");
+        $("#dot-output").append("<div class='dot circ glow-off' id='" + i + "'></div>");
     }
 
     // records color selection - checks for glow
@@ -71,4 +71,12 @@ $(document).ready(function () {
             $('#active-color').addClass(activeColor);
         }
     });
+
+    // change bg color
+    $('.bg-select').on('click', function (e) {
+        let bg = $(this).attr('value');
+        $('#dot-output').removeClass();
+        $('#dot-output').addClass(bg);
+    });
+
 });
