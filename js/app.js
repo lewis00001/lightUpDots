@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     // variables
     let numDots = 208;
-    let activeColor = "glow-pink";
+    let activeColor = "glow-white";
     let dotShape = "circ";
     let glow = true;
 
